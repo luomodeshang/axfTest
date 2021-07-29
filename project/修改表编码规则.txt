@@ -1,0 +1,4 @@
+首先通过语句查看： show create table  axf_wheel ;  
+然后通过语句修改数据表编码：alter table axf_wheel default character set utf8;  
+下面就是更改列的编码即可 
+alter table axf_wheel change name name varchar(20) character set utf8; 
