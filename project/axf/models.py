@@ -2,7 +2,8 @@ from django.db import models
 
 # Create your models here.
 
-
+// 数据库设计上，除非强调高并发的应用，python web开发一般会利用外键关联，保证数据的一致性。
+// 因为在高并发应用上，目前业界不太倾向于使用python
 class Wheel(models.Model):
     img = models.CharField(max_length=150)
     name = models.CharField(max_length=20)
@@ -27,6 +28,7 @@ class Shop(models.Model):
     trackid = models.CharField(max_length=20)
 
 
+// todo: 这里的img123已经出现了较大的重复，可以考虑通过关联的方式定义
 class MainShow(models.Model):
     trackid = models.CharField(max_length=10)
     name = models.CharField(max_length=20)

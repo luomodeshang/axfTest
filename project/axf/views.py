@@ -30,6 +30,7 @@ def market(request, categoryid, cid, sortid):
     else:
         productList = Goods.objects.filter(categoryid=categoryid, childcid=cid)
 
+// TODO: 类似的逻辑实际上已经在操作数据库，一般的做法是通过MVC的层次划分方式，将view层中的逻辑尽量简化
     # 排序
     if sortid == '1':
         productList = productList.order_by("productnum")
