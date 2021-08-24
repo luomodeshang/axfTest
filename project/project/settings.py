@@ -74,7 +74,8 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
+// python 开发关系型数据库，常用postgres，相关知识可以了解~
+// 同时，这些配置一般用系统环境变量的方式进行管理
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
